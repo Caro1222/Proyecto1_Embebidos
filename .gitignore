@@ -1,0 +1,33 @@
+# Ignorar carpetas de caché de Python y otros
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Carpetas genéricas de caché y salidas
+cache/
+*/cache/
+Proyecto1/cache/
+output/
+*/output/
+
+# Archivos de entorno virtual
+.env/
+.venv/
+venv/
+ENV/
+
+# Archivos temporales y de sistema
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Archivos grandes (videos, blobs, etc.)
+*.mp4
+*.blob
+
+
