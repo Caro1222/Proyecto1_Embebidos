@@ -1,0 +1,12 @@
+{
+  "input_preproc": [{
+    "format": "image",
+    "mean": [123.675, 116.28, 103.53],
+    "scale": [51.525, 50.4, 50.625]
+  }],
+  "output_postproc": [{
+    "layer_name": "output",
+    "type": "color_map",
+    "colormap": "viridis"
+  }]
+}
