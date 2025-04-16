@@ -1,0 +1,36 @@
+<description>2D human pose estimation with tuned mobilenet backbone (based on OpenPose).</description>
+<task_type>human_pose_estimation</task_type>
+<files>
+  <name>FP32/human-pose-estimation-0001.xml</name>
+  <size>152120</size>
+  <checksum>64e24ceca496aba4fb818edbea7c3a1405bc42c3166eac1b4be4f6cc89623c80cb9a1fd4c32d245d423653aa588e1a0b</checksum>
+  <source>https://storage.openvinotoolkit.org/repositories/open_model_zoo/2023.0/models_bin/1/human-pose-estimation-0001/FP32/human-pose-estimation-0001.xml</source>
+</files>
+<files>
+  <name>FP32/human-pose-estimation-0001.bin</name>
+  <size>16394708</size>
+  <checksum>64ef06d261ae522409172a396d927f7345525dbde011e3e2bff487f73e7b1d8cf622091feba9c23c7d4625c0aab0a3e5</checksum>
+  <source>https://storage.openvinotoolkit.org/repositories/open_model_zoo/2023.0/models_bin/1/human-pose-estimation-0001/FP32/human-pose-estimation-0001.bin</source>
+</files>
+<files>
+  <name>FP16/human-pose-estimation-0001.xml</name>
+  <size>218215</size>
+  <checksum>cffe8df7d053b9cbf858a21faa32e30cb8a645416e9ee4ce3fbcc3106094505477d66a06b7e46d6ddb9c2de4b0cee319</checksum>
+  <source>https://storage.openvinotoolkit.org/repositories/open_model_zoo/2023.0/models_bin/1/human-pose-estimation-0001/FP16/human-pose-estimation-0001.xml</source>
+</files>
+<files>
+  <name>FP16/human-pose-estimation-0001.bin</name>
+  <size>8197354</size>
+  <checksum>dabb7be42c5be008de354c6670aa8291c2d18e59f18a1c138df9b5200929a03c1e323930a1d21ecff69d3f06007de67c</checksum>
+  <source>https://storage.openvinotoolkit.org/repositories/open_model_zoo/2023.0/models_bin/1/human-pose-estimation-0001/FP16/human-pose-estimation-0001.bin</source>
+</files>
+<input_info>
+  <name>data</name>
+  <shape>1</shape>
+  <shape>3</shape>
+  <shape>256</shape>
+  <shape>456</shape>
+  <layout>NCHW</layout>
+</input_info>
+<framework>dldt</framework>
+<license>https://raw.githubusercontent.com/openvinotoolkit/open_model_zoo/master/LICENSE</license>
