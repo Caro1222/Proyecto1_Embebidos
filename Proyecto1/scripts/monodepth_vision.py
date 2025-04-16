@@ -1,18 +1,12 @@
-import sys
-import gi
+import os
 from gst_utils import gst_launch
-
-gi.require_version('Gst', '1.0')
-from gi.repository import Gst
-
-Gst.init(None)
 
 # general
 DEVICE="AUTO"
 
 # paths reemplazar en maquina virtual
-MODELS_PATH="/home/carolina/Proyecto1/model" 
-MODELS_PROC_PATH="/home/carolina/Proyecto1/model"
+MODELS_PATH="/home/carolina/Proyecto1_Embebidos/Proyecto1/model" 
+MODELS_PROC_PATH="/home/carolina/Proyecto1_Embebidos/Proyecto1/model"
 
 # Models
 MODEL_1="MiDaS_small"
@@ -25,7 +19,9 @@ HPE_MODEL=f"{MODELS_PATH}/{MODEL_1}.xml"
 
 # Input
 #INPUT="https://github.com/intel-iot-devkit/sample-videos/raw/master/face-demographics-walking.mp4"
-INPUT="/home/carolina/Proyecto1/Coco-Walking-in-Berkeley.mp4"
+INPUT="/home/carolina/Proyecto1/inputs/Coco-Walking-in-Berkeley.mp4"
+
+OUTPUT_PATH = "/home/dlstreamer/code/output/salida.mp4"
 
 pipeline_str = (
     f'urisourcebin buffer-size=4096 uri={INPUT} ! '
@@ -34,6 +30,6 @@ pipeline_str = (
     f'queue ! '
     f'gvawatermark ! videoconvert ! video/x-raw,format=BGR ! appsink'
 )
-#gst_launch(pipeline_str)
-pipeline = Gst.parse_launch(pipeline_str)
-pipeline.set_state(Gst.State.PLAYING)
+
+# Ejecutar pipeline
+gst_launch(pipeline_str)
