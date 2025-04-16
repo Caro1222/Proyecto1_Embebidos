@@ -19,9 +19,9 @@ HPE_MODEL=f"{MODELS_PATH}/{MODEL_1}.xml"
 
 # Input
 #INPUT="https://github.com/intel-iot-devkit/sample-videos/raw/master/face-demographics-walking.mp4"
-INPUT="/home/carolina/Proyecto1/inputs/Coco-Walking-in-Berkeley.mp4"
+INPUT="/home/carolina/Proyecto1_Embebidos/Proyecto1/inputs/Coco-Walking-in-Berkeley.mp4"
 
-OUTPUT_PATH = "/home/dlstreamer/code/output/salida.mp4"
+OUTPUT_PATH = "/home/carolina/Proyecto1_Embebidos/Proyecto1/output/salida.mp4"
 
 pipeline_str = (
     f'urisourcebin buffer-size=4096 uri={INPUT} ! '
