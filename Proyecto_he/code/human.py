@@ -6,8 +6,8 @@ from gst_utils import gst_launch
 DEVICE="AUTO"
 
 # paths
-MODELS_PATH="/home/carolina/Proyecto1_Embebidos"
-MODELS_PROC_PATH="/home/carolina/Proyecto1_Embebidos"
+MODELS_PATH="/home/carolina/Proyecto1_Embebidos/Proyecto_he"
+MODELS_PROC_PATH="/home/carolina/Proyecto1_Embebidos/Proyecto_he"
 
 # Models
 MODEL_1="human-pose-estimation-0001"
@@ -16,10 +16,10 @@ MODEL_1="human-pose-estimation-0001"
 HPE_MODEL_PROC=f"{MODELS_PROC_PATH}/{MODEL_1}.json"
 
 # Model paths
-HPE_MODEL=f"{MODELS_PATH}/intel/{MODEL_1}/FP32/{MODEL_1}.xml"
+HPE_MODEL=f"{MODELS_PATH}/{MODEL_1}.xml"
 
 # Input
-INPUT="https://github.com/intel-iot-devkit/sample-videos/raw/master/face-demographics-walking.mp4"
+INPUT="{MODELS_PATH}/face-demographics-walking.mp4"
 
 pipeline_str = (
     f'urisourcebin buffer-size=4096 uri={INPUT} ! '

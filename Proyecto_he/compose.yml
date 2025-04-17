@@ -1,0 +1,28 @@
+services:
+  dlstreamer:
+    #env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tec/dlstreamer:devel
+    privileged: true
+    network_mode: host
+    working_dir: /home/dlstreamer/code
+
+    #command: /home/dlstreamer/.local/bin/jupyter-lab --no-browser
+    
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - ~/.Xauthority:/home/dlstreamer/.Xauthority
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/bus/usb:/dev/bus/usb
+      - .:/home/dlstreamer/dlstreamer_notebooks:rw
+
+    environment:
+      - XDG_RUNTIME_DIR=/tmp
+      - DISPLAY=${DISPLAY}
+
+    stdin_open: true  # equivalent to docker run -i
+    tty: true         # equivalent to docker run -t
+    command: bash     # starts bash shell
