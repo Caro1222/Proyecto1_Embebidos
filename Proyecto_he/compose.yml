@@ -17,7 +17,7 @@ services:
       - ~/.Xauthority:/home/dlstreamer/.Xauthority
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev/bus/usb:/dev/bus/usb
-      - .:/home/dlstreamer/dlstreamer_notebooks:rw
+      - .:/home/dlstreamer/code:rw  # maps entire project to /code inside container
 
     environment:
       - XDG_RUNTIME_DIR=/tmp
