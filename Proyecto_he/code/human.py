@@ -1,6 +1,6 @@
 import sys
 
-from gst_utils import gst_launch
+from utils.gst_utils import gst_launch
 
 # general
 DEVICE="AUTO"
